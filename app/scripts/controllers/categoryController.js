@@ -13,7 +13,7 @@
         init();
 
         function init() {
-            $http.get("http://localhost:3000/categories")
+            $http.get("http://localhost:3004/categories")
                 .then(function (response) {
                     console.log(response);
                     $scope.categories = response.data;

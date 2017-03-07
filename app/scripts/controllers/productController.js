@@ -12,7 +12,7 @@
         init();
 
         function init() {
-            $http.get('http://localhost:3000/products').then(function (response) {
+            $http.get('http://localhost:3004/products').then(function (response) {
                 $scope.products = response.data;
                 console.log(response.data);
             });
