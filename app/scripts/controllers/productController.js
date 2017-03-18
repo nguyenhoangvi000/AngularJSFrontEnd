@@ -3,19 +3,20 @@
 
     angular
         .module('sbAdminApp')
-        .controller('productController', ['$scope', 'productFactoryService', ProductController])
+        .controller('productController', ['$scope', 'pizzaFactory', ProductController])
 
     /** @ngInject */
-    function ProductController($scope, productFactoryService) {
+    function ProductController($scope, pizzaFactory) {
 
-        $scope.getAllCustomers = function () {
-            productFactoryService.getAllPizza().then(function (response) {
-                $scope.products = response.data;
-            }, function (error) {
-                var pizza = {
+        getAllPizzas();
 
-                }
-            })
+        function getAllPizzas() {
+            console.log('ok');
+            // pizzaFactory.getAllPizzas().then(function (response) {
+            //     $scope.products = response.data;
+            // }, function (error) {
+
+            // })
         }
 
         $scope.getCustomer = function () {

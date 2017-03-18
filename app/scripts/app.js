@@ -7,7 +7,7 @@ angular
     'oc.lazyLoad',
     'ui.router',
     'ui.bootstrap',
-    'angular-loading-bar',
+    'angular-loading-bar'
   ])
   .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
 
@@ -99,7 +99,7 @@ angular
                 'scripts/controllers/categoryController.js',
               ]
             })
-          } 
+          }
         },
         url: '/category'
       })
