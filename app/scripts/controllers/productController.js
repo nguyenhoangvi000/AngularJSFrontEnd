@@ -3,20 +3,29 @@
 
     angular
         .module('sbAdminApp')
-        .controller('productController', ['$scope', '$http', ProductController])
+        .controller('productController', ['$scope', 'productFactoryService', ProductController])
 
     /** @ngInject */
-    function ProductController($scope, $http) {
-        var vm = this;
+    function ProductController($scope, productFactoryService) {
 
-        init();
-
-        function init() {
-            $http.get('http://localhost:3004/products').then(function (response) {
+        $scope.getAllCustomers = function () {
+            productFactoryService.getAllPizza().then(function (response) {
                 $scope.products = response.data;
-                console.log(response.data);
-            });
+            }, function (error) {
+                var pizza = {
+
+                }
+            })
         }
+
+        $scope.getCustomer = function () {
+
+        }
+
+        $scope.insertCustomer = function () {
+
+        }
+
 
     }
 

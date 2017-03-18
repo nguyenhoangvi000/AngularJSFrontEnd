@@ -99,13 +99,24 @@ angular
                 'scripts/controllers/categoryController.js',
               ]
             })
-          }
+          } 
         },
         url: '/category'
       })
-      .state('dashboard.blank', {
-        templateUrl: 'views/pages/blank.html',
-        url: '/blank'
+      .state('dashboard.order', {
+        templateUrl: 'views/order.html',
+        url: '/order',
+        resolve: {
+          loadMyFiles: function ($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name: 'sbAdminApp',
+              files: [
+                'scripts/controllers/main.js',
+                'scripts/controllers/orderController.js',
+              ]
+            })
+          }
+        }
       })
       .state('login', {
         templateUrl: 'views/pages/login.html',
