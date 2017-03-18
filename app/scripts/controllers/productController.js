@@ -3,8 +3,8 @@
 
 angular
     .module('sbAdminApp')
-    .controller('productController', ['$scope', '$http', 'pizzaFactory', /** @ngInject */
-        function ProductController($scope, $http, pizzaFactory) {
+    .controller('productController', ['$scope', 'pizzaFactory',
+        function ProductController($scope, pizzaFactory) {
 
             getAll();
 
