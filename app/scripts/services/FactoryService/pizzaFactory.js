@@ -1,6 +1,6 @@
 angular.module('sbAdminApp').factory('pizzaFactory', ['$scope', '$http', function ($scope, $http) {
     var urlBase = "http://localhost:3000/products";
-    var pizzaFactory = {};
+    pizzaFactory = {};
 
     pizzaFactory.getAllPizzas = function () {
         return $http.get(urlBase);
@@ -15,6 +15,4 @@ angular.module('sbAdminApp').factory('pizzaFactory', ['$scope', '$http', functio
     pizzaFactory.insertPizza = function (pizza) {
         return $http.put(urlBase + '/' + pizza);
     }
-
-
 }]);
