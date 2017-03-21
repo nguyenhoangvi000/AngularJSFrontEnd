@@ -3,9 +3,9 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="page-header">
+            <h1 class="page-header">
                 Sản phẩm
-            </h3>
+            </h1>
             <ol class="breadcrumb">
                 <li>
                     <i class="fa fa-dashboard"></i> <a href="index.html">Tổng quan</a>
@@ -61,14 +61,6 @@
                             <td>{{product.description}}</td>
                             <td>{{product.price}}</td>
                             <td>{{product.price}}</td>
-                            <tr>
-                                <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
-                                    <uib-accordion-heading>
-                                        Custom template with custom header template <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
-                                    </uib-accordion-heading>
-                                    World
-                                </div>
-                            </tr>
                             <td><button data-toggle="modal" data-target="#myModalEdit" ng-click="deletePizza()" class="btn btn-primary btn-lg"
                                     type="button">
                             <i class="glyphicon glyphicon-edit"></i>

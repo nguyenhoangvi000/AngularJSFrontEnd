@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 angular
   .module('sbAdminApp', [
     'oc.lazyLoad',
@@ -16,6 +14,7 @@ angular
       debug: false,
       events: true,
     });
+
 
     $urlRouterProvider.otherwise('/dashboard/home');
 
