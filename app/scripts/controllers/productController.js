@@ -18,8 +18,15 @@ angular
                     })
             }
 
+
+
             $scope.deletePizza = function (id) {
-                pizzaFactory.deletePizza()
+                pizzaFactory.deletePizza(id).then(function (response) {
+                    console.log(response.data);
+                    getAll();
+                }, function (error) {
+                    console.log(error);
+                })
             }
 
             $scope.insertPizza = function () {
