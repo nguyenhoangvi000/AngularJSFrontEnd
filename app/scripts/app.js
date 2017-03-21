@@ -131,8 +131,8 @@ angular
             return $ocLazyLoad.load({
               name: 'sbAdminApp',
               files: [
-                'scripts/services/FactoryService/pizzaFactory.js',
-                'scripts/controllers/productController.js'
+                'scripts/controllers/productController.js',
+                'scripts/services/FactoryService/pizzaFactory.js'
               ]
             })
           }

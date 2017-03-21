@@ -15,4 +15,8 @@ angular.module('sbAdminApp').factory('pizzaFactory', ['$http', function ($http) 
     pizzaFactory.insertPizza = function (pizza) {
         return $http.put(urlBase + '/' + pizza);
     }
+
+    console.log(pizzaFactory);
+
+    return pizzaFactory;
 }]);
