@@ -6,7 +6,8 @@ angular
     'ui.router',
     'ui.bootstrap',
     'angular-loading-bar',
-    'ngAnimate'
+    'ngAnimate', 
+    'ngTagsInput'
   ])
   .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
 
@@ -132,7 +133,9 @@ angular
               name: 'sbAdminApp',
               files: [
                 'scripts/controllers/productController.js',
-                'scripts/services/FactoryService/pizzaFactory.js'
+                'scripts/controllers/categoryController.js',
+                'scripts/services/FactoryService/pizzaFactory.js',
+                'scripts/services/FactoryService/categoryFactory.js'
               ]
             })
           }

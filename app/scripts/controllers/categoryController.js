@@ -4,20 +4,21 @@
 
     angular
         .module('sbAdminApp')
-        .controller('CategoryController', ['$scope', '$http', CategoryController])
+        .controller('categoryController', ['$scope', 'categoryFactory', categoryController])
 
     /** @ngInject */
-    function CategoryController($scope, $http) {
-        var vm = this;
+    function categoryController($scope, categoryFactory) {
 
-        init();
+        getAllCategory();
 
-        function init() {
-            $http.get("http://localhost:3000/categories")
+        function getAllCategory() {
+            console.log('ok');
+            categoryFactory.getAllCategories()
                 .then(function (response) {
-                    console.log(response);
                     $scope.categories = response.data;
-                });
+                }, function (error) {
+                    console.log(error);
+                })
         }
 
     }
